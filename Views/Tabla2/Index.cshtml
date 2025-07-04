@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Cf36.Models.Tabla2>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Registrar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ListarTabla2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Editar)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Registrar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ListarTabla2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Editar)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdTabla2">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdTabla2">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdTabla2">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

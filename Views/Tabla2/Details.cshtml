@@ -1,0 +1,36 @@
+﻿@model Cf36.Models.Tabla2
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Tabla2</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Registrar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Registrar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ListarTabla2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ListarTabla2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Editar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Editar)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IdTabla2">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
